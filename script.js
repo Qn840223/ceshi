@@ -298,6 +298,7 @@ console.log('💡 提示：请在 script.js 中配置你的 Supabase 凭证')
 // ==================== 数字滚动动画 ====================
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-target'))
+    const label = element.nextElementSibling.textContent
     const duration = 2000
     const step = target / (duration / 16)
     let current = 0
@@ -305,12 +306,31 @@ function animateCounter(element) {
     const timer = setInterval(() => {
         current += step
         if (current >= target) {
-            element.textContent = target.toLocaleString()
+            element.textContent = formatNumber(target, label)
             clearInterval(timer)
         } else {
-            element.textContent = Math.floor(current).toLocaleString()
+            element.textContent = formatNumber(Math.floor(current), label)
         }
     }, 16)
+}
+
+// 格式化数字显示
+function formatNumber(num, label) {
+    // 如果是百分比
+    if (label.includes('%')) {
+        return num + '%'
+    }
+    // 如果是倍数
+    if (label.includes('倍數')) {
+        return num + 'x'
+    }
+    // 如果是大数字
+    if (num >= 10000000) {
+        return Math.floor(num / 10000) + '万+'
+    } else if (num >= 10000) {
+        return Math.floor(num / 10000) + '万+'
+    }
+    return num.toLocaleString()
 }
 
 // 观察数字卡片，进入视口时触发动画
