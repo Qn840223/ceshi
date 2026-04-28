@@ -235,11 +235,14 @@
             
             cards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // 移除所有卡片的 active 类
-                    cards.forEach(c => c.classList.remove('active'));
-                    
-                    // 给点击的卡片添加 active 类
-                    this.classList.add('active');
+                    // 如果点击的不是当前激活的卡片
+                    if (!this.classList.contains('active')) {
+                        // 移除所有卡片的 active 类
+                        cards.forEach(c => c.classList.remove('active'));
+                        
+                        // 给点击的卡片添加 active 类
+                        this.classList.add('active');
+                    }
                 });
             });
         });
