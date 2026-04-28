@@ -1108,3 +1108,147 @@ html {
         font-size: 14px;
     }
 }
+
+
+/* ==================== Hero 震撼开场 ==================== */
+.hero-alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    margin-bottom: 32px;
+    border: 2px solid rgba(255, 87, 87, 0.5);
+    background: rgba(255, 87, 87, 0.1);
+    animation: pulse-alert 2s ease-in-out infinite;
+}
+
+@keyframes pulse-alert {
+    0%, 100% {
+        border-color: rgba(255, 87, 87, 0.5);
+        box-shadow: 0 0 20px rgba(255, 87, 87, 0.3);
+    }
+    50% {
+        border-color: rgba(255, 87, 87, 0.8);
+        box-shadow: 0 0 30px rgba(255, 87, 87, 0.5);
+    }
+}
+
+.alert-icon {
+    font-size: 24px;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.alert-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff5757;
+    margin: 0;
+    text-align: center;
+}
+
+/* ==================== Hero CTA 按钮 ==================== */
+.hero-cta {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-cta-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 48px;
+    background: linear-gradient(135deg, var(--neon-green), #00cc70);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 48px var(--glow-green);
+}
+
+.hero-cta-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 16px 64px var(--glow-green);
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--darker-bg);
+    margin-bottom: 8px;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.cta-main {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--darker-bg);
+    margin-bottom: 4px;
+}
+
+.cta-sub {
+    font-size: 13px;
+    color: rgba(10, 14, 26, 0.7);
+    font-weight: 500;
+}
+
+/* ==================== Hero 标题优化 ==================== */
+.hero-title {
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .alert-text {
+        font-size: 18px;
+    }
+    
+    .cta-main {
+        font-size: 24px;
+    }
+}
+
+/* ==================== 响应式优化 ==================== */
+@media (max-width: 375px) {
+    .hero-alert {
+        padding: 12px 16px;
+    }
+    
+    .alert-text {
+        font-size: 14px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-cta-btn {
+        padding: 20px 32px;
+    }
+    
+    .cta-main {
+        font-size: 18px;
+    }
+}
