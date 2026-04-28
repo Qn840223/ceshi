@@ -133,7 +133,7 @@ body {
 
 .demo-card:nth-child(2) {
     z-index: 1;
-    left: 60px;
+    left: 120px;
     opacity: 0.85;
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 .demo-card:not(.active) {
-    left: 60px;
+    left: 120px;
 }
 
 .demo-card:hover {
@@ -534,11 +534,11 @@ body {
     }
     
     .demo-card:nth-child(2) {
-        left: 40px;
+        left: 80px;
     }
     
     .demo-card:not(.active) {
-        left: 40px;
+        left: 80px;
     }
 }
 
