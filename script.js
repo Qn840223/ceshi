@@ -293,3 +293,84 @@ window.addEventListener('scroll', () => {
 
 console.log('🚀 落地页已加载完成')
 console.log('💡 提示：请在 script.js 中配置你的 Supabase 凭证')
+
+
+// ==================== 数字滚动动画 ====================
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'))
+    const duration = 2000
+    const step = target / (duration / 16)
+    let current = 0
+    
+    const timer = setInterval(() => {
+        current += step
+        if (current >= target) {
+            element.textContent = target.toLocaleString()
+            clearInterval(timer)
+        } else {
+            element.textContent = Math.floor(current).toLocaleString()
+        }
+    }, 16)
+}
+
+// 观察数字卡片，进入视口时触发动画
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const numbers = entry.target.querySelectorAll('.stat-number')
+            numbers.forEach(num => {
+                if (num.textContent === '0') {
+                    animateCounter(num)
+                }
+            })
+            statsObserver.unobserve(entry.target)
+        }
+    })
+}, { threshold: 0.5 })
+
+// 观察统计区域
+const statsSection = document.querySelector('.stats-section')
+if (statsSection) {
+    statsObserver.observe(statsSection)
+}
+
+// ==================== FAQ 折叠功能 ====================
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item')
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question')
+        
+        question.addEventListener('click', () => {
+            // 关闭其他打开的项
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active')
+                }
+            })
+            
+            // 切换当前项
+            item.classList.toggle('active')
+            
+            // 追踪 FAQ 点击
+            if (tracker && item.classList.contains('active')) {
+                const questionText = item.querySelector('h3').textContent
+                tracker.trackClick(`FAQ-${questionText}`, 'faq-expand', '')
+            }
+        })
+    })
+})
+
+// ==================== 评价卡片悬停效果增强 ====================
+const testimonialCards = document.querySelectorAll('.testimonial-card')
+testimonialCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.borderColor = 'var(--cyan-blue)'
+    })
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+    })
+})
+
+console.log('✨ 页面增强功能已加载')
