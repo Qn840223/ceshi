@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="AI 智能獲客神器 - 告別傳統獲客玄學，打造自動化流量矩陣">
-    <title>AI 智能獲客神器 - 全自動流量矩陣</title>
+    <meta name="description" content="AI 智能獲客神器 - 全自動流量矩陣系統">
+    <title>AI 智能獲客神器 - 讓獲客變得簡單</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero 區域 -->
-    <section class="hero-section" id="hero">
+    <!-- 顶部 Logo 区域 -->
+    <header class="top-header">
         <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <div class="logo-header">
+                <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
                     <circle cx="30" cy="30" r="28" stroke="url(#gradient)" stroke-width="4"/>
                     <path d="M20 30L27 37L40 24" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     <defs>
@@ -23,373 +22,188 @@
                         </linearGradient>
                     </defs>
                 </svg>
+                <span class="logo-text">AI 智能獲客</span>
             </div>
+        </div>
+    </header>
 
-            <!-- 震撼开场 -->
-            <div class="hero-alert glass-effect">
-                <span class="alert-icon">⚠️</span>
-                <p class="alert-text">你的同行，正在用 AI 偷偷「偷走」你的客戶！</p>
-            </div>
-
-            <!-- 主標題 -->
-            <h1 class="hero-title">
-                當你還在為文案抓耳撓腮<br>
-                <span class="gradient-text">你的同行已開啟</span><br>
-                「自動提款機」模式
+    <!-- 主标题区域 -->
+    <section class="main-hero">
+        <div class="container">
+            <div class="hero-badge">⚡ 限時體驗</div>
+            <h1 class="main-title">
+                別讓同行用 AI<br>
+                <span class="highlight-text">偷走你的客戶</span>
             </h1>
-
-            <p class="hero-subtitle">
-                他們用 AI 一鍵克隆全網爆款基因，每天全自動生成圖文和短片<br>
-                幾十個矩陣帳號在各大平台瘋狂鋪量
+            <p class="main-subtitle">
+                當你還在為文案發愁、為剪輯熬夜時<br>
+                聰明的同行早已用 AI 開啟「自動賺錢」模式<br>
+                每天自動生成爆款內容，矩陣帳號瘋狂獲客
             </p>
-
-            <!-- 痛點卡片 -->
-            <div class="pain-points">
-                <div class="pain-card glass-effect">
-                    <div class="pain-icon">📱</div>
-                    <h3>手機即終端</h3>
-                    <p>一部手機隨時隨地完成運營</p>
-                </div>
-                <div class="pain-card glass-effect">
-                    <div class="pain-icon">🎯</div>
-                    <h3>爆款不靠運</h3>
-                    <p>AI 智能拆解爆款基因密碼</p>
-                </div>
-                <div class="pain-card glass-effect">
-                    <div class="pain-icon">🤖</div>
-                    <h3>AI 智能生圖</h3>
-                    <p>一句文案秒出精美配圖</p>
-                </div>
-                <div class="pain-card glass-effect">
-                    <div class="pain-icon">🛡️</div>
-                    <h3>深度去重防封</h3>
-                    <p>保護矩陣賬號資產安全</p>
-                </div>
-            </div>
-
-            <!-- 快速行动按钮 -->
-            <div class="hero-cta">
-                <button class="hero-cta-btn ripple-btn" onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})">
-                    <span class="cta-badge">限時體驗</span>
-                    <span class="cta-main">立即免費體驗 AI 獲客</span>
-                    <span class="cta-sub">名額有限，先到先得</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- 滾動提示 -->
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- 数据展示区域 -->
-    <section class="stats-section" id="stats">
+    <!-- 产品展示区域 -->
+    <section class="product-demo">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card glass-effect">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-number" data-target="100000">0</div>
-                    <div class="stat-label">活躍用戶</div>
-                </div>
-                <div class="stat-card glass-effect">
-                    <div class="stat-icon">📝</div>
-                    <div class="stat-number" data-target="10000000">0</div>
-                    <div class="stat-label">生成內容數</div>
-                </div>
-                <div class="stat-card glass-effect">
-                    <div class="stat-icon">⚡</div>
-                    <div class="stat-number" data-target="99">0</div>
-                    <div class="stat-label">賬號存活率 %</div>
-                </div>
-                <div class="stat-card glass-effect">
-                    <div class="stat-icon">💰</div>
-                    <div class="stat-number" data-target="3">0</div>
-                    <div class="stat-label">效率提升倍數</div>
+            <div class="demo-placeholder">
+                <div class="demo-screen">
+                    <div class="screen-header">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="screen-body">
+                        <div class="demo-line"></div>
+                        <div class="demo-line short"></div>
+                        <div class="demo-line"></div>
+                        <div class="demo-box"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 功能介紹區域 -->
-    <section class="features-section" id="features">
+    <!-- CTA 主要行动区域 -->
+    <section class="main-cta">
         <div class="container">
-            <h2 class="section-title gradient-text">為什麼選擇我們</h2>
-            <p class="section-subtitle">從靈感到發布，打造全鏈路獲客閉環</p>
+            <div class="cta-box glass-effect">
+                <span class="cta-badge">🎁 限時體驗</span>
+                <h2 class="cta-title">別再親自熬夜做內容了<br>把獲客交給 AI</h2>
+                <p class="cta-desc">30 秒生成原創爆款內容，防封號技術護航，小白也能輕鬆上手</p>
+                <p class="cta-action-text">點擊下方按鈕添加客服，領取</p>
+                <p class="cta-highlight">AI 自動獲客免費體驗名額</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://work.weixin.qq.com/ca/cawcde7e9382f95e9d" class="cta-btn wechat-btn" target="_blank">
+                        <span class="btn-icon">💚</span>
+                        <span class="btn-text">點擊添加微信</span>
+                    </a>
+                    <a href="https://wa.me/8613620293913" class="cta-btn whatsapp-btn" target="_blank">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">點擊添加 WhatsApp</span>
+                    </a>
+                    <a href="https://line.me/ti/p/4-vC2EBDF_" class="cta-btn line-btn" target="_blank">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">點擊添加 LINE</span>
+                    </a>
+                </div>
+                
+                <p class="cta-urgency">⏰ 名額有限，先到先得，立即體驗 AI 降維打擊</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 为什么选择我们 -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">為什麼選擇我們</h2>
+            <p class="section-subtitle">告別傳統獲客玄學，一部手機打造自動化流量矩陣</p>
             
-            <!-- 3D 產品圖 -->
-            <div class="product-showcase">
-                <div class="product-3d glass-effect">
-                    <div class="product-screen">
-                        <div class="screen-content">
-                            <div class="screen-line"></div>
-                            <div class="screen-line"></div>
-                            <div class="screen-line"></div>
-                            <div class="screen-circle"></div>
-                        </div>
-                    </div>
-                    <div class="product-glow"></div>
+            <div class="features-grid">
+                <div class="feature-box glass-effect">
+                    <div class="feature-icon">📱</div>
+                    <h3>手機即終端</h3>
+                    <p>告別繁瑣的電腦操作，一部手機就能隨時隨地完成矩陣運營，讓碎片化時間變現</p>
                 </div>
-            </div>
-
-            <!-- 功能列表 -->
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="feature-icon">💡</div>
-                    <div class="feature-content">
-                        <h3>靈感引擎</h3>
-                        <p>一鍵搜索全網爆款，自動提煉內容密碼，告別靈感枯竭</p>
-                    </div>
+                
+                <div class="feature-box glass-effect">
+                    <div class="feature-icon">🎯</div>
+                    <h3>爆款不靠運</h3>
+                    <p>拒絕盲目原創。輸入同行鏈接，AI 智能拆解爆款基因並提煉密碼，30 秒生成專屬高轉化內容</p>
                 </div>
-                <div class="feature-item">
+                
+                <div class="feature-box glass-effect">
                     <div class="feature-icon">🎨</div>
-                    <div class="feature-content">
-                        <h3>一鍵爆款克隆</h3>
-                        <p>複製同行爆款鏈接，AI 智能分析框架，生成高轉化原創</p>
-                    </div>
+                    <h3>AI 智能生圖/出片</h3>
+                    <p>不會 P 圖剪輯？一句文案秒出精美配圖，更支持一鍵提取商品鏈接，自動生成帶貨大片</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🖼️</div>
-                    <div class="feature-content">
-                        <h3>AI 智能生圖</h3>
-                        <p>不會 P 圖也能做爆款，一句文案自動生成多張高清配圖</p>
-                    </div>
+                
+                <div class="feature-box glass-effect">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>深度去重防封號</h3>
+                    <p>獨家 AI 底層邏輯重構，規避平台低級洗稿查重風險。保護你的矩陣賬號資產，存活率大幅提升</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📸</div>
-                    <div class="feature-content">
-                        <h3>拍照種草專家</h3>
-                        <p>手機拍照上傳產品，AI 自動提取賣點生成種草海報</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎬</div>
-                    <div class="feature-content">
-                        <h3>爆款視頻工廠</h3>
-                        <p>無需拍攝剪輯，10 秒產出高質感帶貨短視頻</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <div class="feature-content">
-                        <h3>深度防封處理</h3>
-                        <p>獨家 AI 源創技術，規避平台違規風險，保護賬號安全</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-content">
-                        <h3>全自動矩陣支持</h3>
-                        <p>極簡發布流程，1 分鐘發百號，真正實現量大出奇蹟</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📚</div>
-                    <div class="feature-content">
-                        <h3>內嵌實戰課程</h3>
-                        <p>工具內置 0-1 獲客教學，不僅給工具更教運營思路</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA 區域 -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <h2 class="section-title gradient-text">立即開始體驗</h2>
-            <p class="cta-subtitle">選擇最適合您的聯繫方式，專業顧問為您服務</p>
-
-            <!-- 四個聯繫按鈕 -->
-            <div class="cta-buttons">
-                <button class="cta-btn ripple-btn primary-btn" data-button="whatsapp">
-                    <span class="btn-icon">📱</span>
-                    <span class="btn-text">
-                        <strong>WhatsApp</strong>
-                        <small>即時響應</small>
-                    </span>
-                </button>
-
-                <button class="cta-btn ripple-btn secondary-btn" data-button="line">
-                    <span class="btn-icon">💬</span>
-                    <span class="btn-text">
-                        <strong style="font-size: 12px; white-space: nowrap;">LINE 聯繫</strong>
-                        <small>即時溝通</small>
-                    </span>
-                </button>
-
-                <button class="cta-btn ripple-btn primary-btn" data-button="wechat">
-                    <span class="btn-icon">💚</span>
-                    <span class="btn-text">
-                        <strong style="font-size: 12px; white-space: nowrap;">微信諮詢</strong>
-                        <small>掃碼添加</small>
-                    </span>
-                </button>
-
-                <button class="cta-btn ripple-btn tertiary-btn" data-button="demo">
-                    <span class="btn-icon">🎬</span>
-                    <span class="btn-text">
-                        <strong>預約演示</strong>
-                        <small>深度體驗</small>
-                    </span>
-                </button>
-            </div>
-
-            <!-- 信任標識 -->
-            <div class="trust-badges">
-                <div class="badge">✓ 10000+ 用戶信賴</div>
-                <div class="badge">✓ 99.9% 賬號存活率</div>
-                <div class="badge">✓ 7×24 技術支持</div>
-                <div class="badge">✓ 30 天無理由退款</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 核心優勢區域 -->
-    <section class="advantages-section" id="advantages">
-        <div class="container">
-            <h2 class="section-title gradient-text">核心優勢</h2>
-            <p class="section-subtitle">讓您的獲客效率提升 10 倍</p>
-
-            <div class="advantages-grid">
-                <div class="advantage-card glass-effect">
-                    <div class="advantage-number">01</div>
+                
+                <div class="feature-box glass-effect">
+                    <div class="feature-icon">👶</div>
                     <h3>0 基礎新手友好</h3>
                     <p>傻瓜式操作，打開即用。不強求文筆，不必懂排版，讓 AI 成為 24 小時全天候的免費運營助理</p>
                 </div>
-                <div class="advantage-card glass-effect">
-                    <div class="advantage-number">02</div>
+                
+                <div class="feature-box glass-effect">
+                    <div class="feature-icon">🎓</div>
                     <h3>保姆級陪跑服務</h3>
-                    <p>不僅賣工具，更教你怎麼賺錢。內含 0-1 實戰運營課程，專屬社群答疑與大咖直播賦能</p>
-                </div>
-                <div class="advantage-card glass-effect">
-                    <div class="advantage-number">03</div>
-                    <h3>極速響應支持</h3>
-                    <p>7×24 小時技術支持，問題秒回應。專業團隊隨時待命，確保您的業務不間斷運行</p>
+                    <p>不僅賣工具，更教你怎麼賺錢。內含 0-1 實戰運營課程，更有專屬社群答疑與大咖直播賦能</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 用户评价区域 -->
-    <section class="testimonials-section" id="testimonials">
+    <!-- 核心功能 -->
+    <section class="core-functions">
         <div class="container">
-            <h2 class="section-title gradient-text">用戶真實反饋</h2>
-            <p class="section-subtitle">看看他們如何通過我們實現獲客增長</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card glass-effect">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👨‍💼</div>
-                        <div class="testimonial-info">
-                            <h4>張先生</h4>
-                            <p>電商創業者</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>使用一個月，小紅書粉絲從 0 漲到 5000+，每天穩定獲客 20+ 條，轉化率提升 3 倍！AI 生成的內容質量超出預期。</p>
-                    </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <h2 class="section-title">核心功能矩陣</h2>
+            <p class="section-subtitle">從爆款靈感、AI 自動創作、矩陣鋪量到防封號處理，打造全鏈路獲客閉環</p>
+            
+            <div class="functions-grid">
+                <div class="function-item glass-effect">
+                    <div class="function-icon">💡</div>
+                    <h3>靈感引擎</h3>
+                    <p>一鍵搜索全網各行業爆款筆記，自動提煉爆款內容與圖片，徹底告別靈感枯竭</p>
                 </div>
-
-                <div class="testimonial-card glass-effect">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👩‍💼</div>
-                        <div class="testimonial-info">
-                            <h4>李小姐</h4>
-                            <p>美妝博主</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>以前每天花 3 小時做內容，現在 30 分鐘搞定。矩陣運營 10 個賬號，月收入翻了 5 倍，真的太香了！</p>
-                    </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">🎯</div>
+                    <h3>一鍵爆款克隆</h3>
+                    <p>複製同行爆款鏈接，AI 智能分析標題、框架與關鍵詞，一鍵生成高轉化原創內容</p>
                 </div>
-
-                <div class="testimonial-card glass-effect">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👨‍🎓</div>
-                        <div class="testimonial-info">
-                            <h4>王同學</h4>
-                            <p>副業新手</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="quote-icon">"</div>
-                        <p>完全 0 基礎，跟著教程一步步來，第一週就出單了！客服很耐心，有問必答，強烈推薦給想做副業的朋友。</p>
-                    </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">🖼️</div>
+                    <h3>AI 智能生圖</h3>
+                    <p>不會 P 圖也能做爆款。只需一句文案，AI 模型自動為你生成多張高清原創配圖</p>
+                </div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">📸</div>
+                    <h3>拍照種草專家</h3>
+                    <p>有產品就能賣。手機拍照上傳產品圖，AI 自動提取賣點，極速生成種草海報與文案</p>
+                </div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">🎬</div>
+                    <h3>爆款視頻工廠</h3>
+                    <p>無需拍攝剪輯，只需粘貼商品鏈接，AI 提取賣點並在 10 秒內產出高質感帶貨短視頻</p>
+                </div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">🔒</div>
+                    <h3>深度防封處理</h3>
+                    <p>採用獨家 AI 源創與深度去重技術，規避平台違規風險，保護你的矩陣賬號安全</p>
+                </div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">⚡</div>
+                    <h3>全自動矩陣支持</h3>
+                    <p>打破 2 天 1 篇筆記的低效，極簡發布流程讓你 1 分鐘發百號，真正實現量大出奇蹟</p>
+                </div>
+                
+                <div class="function-item glass-effect">
+                    <div class="function-icon">📚</div>
+                    <h3>內嵌實戰課程</h3>
+                    <p>工具內置從 0-1 獲客教學到最新防封技巧，不僅給工具，更教你運營思路</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 常见问题区域 -->
-    <section class="faq-section" id="faq">
+    <!-- 页脚 -->
+    <footer class="site-footer">
         <div class="container">
-            <h2 class="section-title gradient-text">常見問題</h2>
-            <p class="section-subtitle">解答您的疑慮</p>
-
-            <div class="faq-list">
-                <div class="faq-item glass-effect">
-                    <div class="faq-question">
-                        <span class="faq-icon">❓</span>
-                        <h3>完全不懂運營，能用嗎？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>當然可以！我們的工具專為新手設計，操作簡單直觀。內置詳細教程和實戰課程，從 0 到 1 手把手教學。更有專屬社群和客服支持，隨時解答您的問題。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item glass-effect">
-                    <div class="faq-question">
-                        <span class="faq-icon">❓</span>
-                        <h3>會不會被平台封號？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>我們採用獨家 AI 深度去重技術，生成的內容原創度高，規避平台查重風險。目前用戶賬號存活率達 99.9%。同時提供防封指南和最新規則更新，全方位保護您的賬號安全。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item glass-effect">
-                    <div class="faq-question">
-                        <span class="faq-icon">❓</span>
-                        <h3>需要什麼設備？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>只需要一部智能手機即可！無需電腦，隨時隨地都能操作。支持 iOS 和 Android 系統，讓您充分利用碎片時間進行內容創作和發布。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item glass-effect">
-                    <div class="faq-question">
-                        <span class="faq-icon">❓</span>
-                        <h3>多久能看到效果？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>根據用戶反饋，大部分人在 1-2 週內就能看到明顯效果。堅持使用並配合我們的運營策略，1 個月內粉絲破千、獲客穩定是完全可以實現的目標。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item glass-effect">
-                    <div class="faq-question">
-                        <span class="faq-icon">❓</span>
-                        <h3>有售後服務嗎？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>我們提供 7×24 小時技術支持，專屬客服團隊隨時在線。購買後即可加入專屬社群，與其他用戶交流經驗，定期還有大咖直播分享最新玩法。30 天內不滿意可無理由退款。</p>
-                    </div>
-                </div>
-            </div>
+            <p>© 2026 AI 智能獲客. 保留所有權利</p>
         </div>
-    </section>
+    </footer>
 
     <!-- 背景裝飾 -->
     <div class="bg-decoration">
