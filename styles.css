@@ -108,19 +108,50 @@ body {
 
 /* ==================== 产品展示 ==================== */
 .product-demo {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
-.demo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 900px;
+.demo-stack-container {
+    position: relative;
+    max-width: 400px;
+    height: 600px;
     margin: 0 auto;
+    perspective: 1000px;
 }
 
-.demo-placeholder {
+.demo-card {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
+}
+
+.demo-card:nth-child(1) {
+    z-index: 2;
+    transform: translateX(-30px) translateY(0) scale(1);
+}
+
+.demo-card:nth-child(2) {
+    z-index: 1;
+    transform: translateX(30px) translateY(0) scale(0.95);
+    opacity: 0.8;
+}
+
+.demo-card.active {
+    z-index: 3 !important;
+    transform: translateX(0) translateY(0) scale(1) !important;
+    opacity: 1 !important;
+}
+
+.demo-card:hover {
+    transform: translateX(0) translateY(-10px) scale(1.02);
+    opacity: 1;
+}
+
+.demo-card.active:hover {
+    transform: translateX(0) translateY(-5px) scale(1.02) !important;
 }
 
 .demo-screen {
@@ -129,7 +160,14 @@ body {
     border-radius: 16px;
     padding: 20px;
     backdrop-filter: blur(20px);
-    aspect-ratio: 9 / 16;
+    height: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.demo-card:hover .demo-screen {
+    box-shadow: 0 25px 80px rgba(0, 255, 136, 0.3);
+    border-color: rgba(0, 255, 136, 0.3);
 }
 
 .screen-header {
@@ -143,6 +181,19 @@ body {
     height: 12px;
     border-radius: 50%;
     background: var(--text-secondary);
+    transition: background 0.3s ease;
+}
+
+.demo-card:hover .dot:nth-child(1) {
+    background: #ff5f57;
+}
+
+.demo-card:hover .dot:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.demo-card:hover .dot:nth-child(3) {
+    background: #28ca42;
 }
 
 .screen-body {
@@ -475,9 +526,17 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .demo-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+    .demo-stack-container {
+        max-width: 320px;
+        height: 500px;
+    }
+    
+    .demo-card:nth-child(1) {
+        transform: translateX(-20px) translateY(0) scale(1);
+    }
+    
+    .demo-card:nth-child(2) {
+        transform: translateX(20px) translateY(0) scale(0.95);
     }
 }
 
