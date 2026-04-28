@@ -703,3 +703,266 @@ html {
 .advantage-card:nth-child(3) {
     animation-delay: 0.3s;
 }
+
+
+/* ==================== 数据展示区域 ==================== */
+.stats-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, transparent, rgba(0, 255, 136, 0.03), transparent);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    padding: 32px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-green), var(--cyan-blue));
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px var(--glow-green);
+}
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--neon-green), var(--cyan-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ==================== 用户评价区域 ==================== */
+.testimonials-section {
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.testimonial-card {
+    padding: 28px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px var(--glow-blue);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--neon-green), var(--cyan-blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.testimonial-info h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.testimonial-info p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.testimonial-content {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: var(--neon-green);
+    opacity: 0.2;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    line-height: 1;
+}
+
+.testimonial-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-rating {
+    font-size: 18px;
+    color: #ffd700;
+}
+
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ==================== 常见问题区域 ==================== */
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.faq-item {
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.faq-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.faq-question h3 {
+    flex: 1;
+    font-size: 16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 28px;
+    color: var(--neon-green);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 24px 24px 64px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==================== 数字滚动动画 ==================== */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    animation: countUp 0.6s ease forwards;
+}
+
+/* ==================== 响应式优化 ==================== */
+@media (max-width: 375px) {
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+    
+    .faq-question h3 {
+        font-size: 14px;
+    }
+}
