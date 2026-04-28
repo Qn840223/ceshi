@@ -48,7 +48,14 @@ body {
 .logo-header {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 .logo-text {
